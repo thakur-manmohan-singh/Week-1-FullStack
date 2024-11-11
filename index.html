@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timetable-container">
+        <h1>Timetable</h1>
+        <table class="timetable">
+            <tr>
+                <th>Hours</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+            </tr>
+            <tr>
+                <td>Period 1</td>
+                <td onclick="showTeacherDetails('science', 'Mr. A')">Science</td>
+                <td onclick="showTeacherDetails('maths', 'Ms. B')">Maths</td>
+                <td onclick="showTeacherDetails('science', 'Mr. A')">Science</td>
+                <td onclick="showTeacherDetails('maths', 'Ms. B')">Maths</td>
+                <td onclick="showTeacherDetails('arts', 'Ms. C')">Arts</td>
+            </tr>
+            <tr>
+                <td>Period 2</td>
+                <td onclick="showTeacherDetails('social', 'Mr. D')">Social</td>
+                <td onclick="showTeacherDetails('hindi', 'Ms. E')">Hindi</td>
+                <td onclick="showTeacherDetails('english', 'Mr. F')">English</td>
+                <td onclick="showTeacherDetails('social', 'Mr. D')">Social</td>
+                <td onclick="showTeacherDetails('sports', 'Mr. G')">Sports</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="lunch">Lunch Break</td>
+            </tr>
+            <tr>
+                <td>Period 3</td>
+                <td onclick="showTeacherDetails('science', 'Mr. A')">Science</td>
+                <td onclick="showTeacherDetails('maths', 'Ms. B')">Maths</td>
+                <td onclick="showTeacherDetails('science', 'Mr. A')">Science</td>
+                <td onclick="showTeacherDetails('maths', 'Ms. B')">Maths</td>
+                <td onclick="showTeacherDetails('project', 'Ms. H')">Project</td>
+            </tr>
+            <tr>
+                <td>Period 4</td>
+                <td onclick="showTeacherDetails('social', 'Mr. D')">Social</td>
+                <td onclick="showTeacherDetails('hindi', 'Ms. E')">Hindi</td>
+                <td onclick="showTeacherDetails('english', 'Mr. F')">English</td>
+                <td onclick="showTeacherDetails('social', 'Mr. D')">Social</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Modal for Teacher Details -->
+    <div id="teacherModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="subjectName"></h2>
+            <p id="teacherName"></p>
+            <p>Contact: teacher.email@example.com</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
